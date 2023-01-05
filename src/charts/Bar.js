@@ -267,6 +267,11 @@ class Bar {
     visibleSeries,
     type
   }) {
+    console.log(
+      `CLOG in "renderSeries", value "elDataLabelsWrap"`,
+      elDataLabelsWrap
+    )
+    console.log(`CLOG in "renderSeries", value "visibleSeries"`, visibleSeries)
     const w = this.w
     const graphics = new Graphics(this.ctx)
 

@@ -118,6 +118,10 @@ class DataLabels {
           }
         }
 
+        if (type === 'rangeBar') {
+          console.log(`CLOG in "drawDataLabel", value "null"`, null)
+        }
+
         let text = ''
 
         const getText = (v) => {

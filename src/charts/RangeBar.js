@@ -11,6 +11,8 @@ import DateTime from '../utils/DateTime'
 
 class RangeBar extends Bar {
   draw(series, seriesIndex) {
+    console.log(`CLOG in "RangeBar", value "series"`, series)
+    console.log(`CLOG in "", value "this.ctx"`, this.ctx)
     let w = this.w
     let graphics = new Graphics(this.ctx)
 
@@ -72,7 +74,7 @@ class RangeBar extends Bar {
         class: 'apexcharts-datalabels',
         'data:realIndex': realIndex
       })
-
+      console.log(`CLOG in "eldatalabels", value "elDataLabelsWrap"`, elDataLabelsWrap)
       let elGoalsMarkers = graphics.group({
         class: 'apexcharts-rangebar-goals-markers',
         style: `pointer-events: none`

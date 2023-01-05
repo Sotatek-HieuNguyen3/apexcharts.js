@@ -36,6 +36,25 @@ export default class BarDataLabels {
       visibleSeries,
       renderedPath
     } = opts
+    console.log(
+      `CLOG in "handleBarDataLabels", value "this.barCtx"`,
+      this.barCtx
+    )
+    console.log(
+      `CLOG in "handleBarDataLabels", value "barYPosition"`,
+      barYPosition
+    )
+    console.log(`CLOG in "handleBarDataLabels", value "x"`, x)
+    console.log(`CLOG in "handleBarDataLabels", value "y"`, y)
+    console.log(`CLOG in "handleBarDataLabels", value "y1"`, y1)
+    console.log(`CLOG in "handleBarDataLabels", value "y2"`, y2)
+    console.log(`CLOG in "handleBarDataLabels", value "i"`, i)
+    console.log(`CLOG in "handleBarDataLabels", value "j"`, j)
+    console.log(
+      `CLOG in "handleBarDataLabels", value "visibleSeries"`,
+      visibleSeries
+    )
+    console.log(`CLOG in "handleBarDataLabels", value "j"`, j)
     let w = this.w
     let graphics = new Graphics(this.barCtx.ctx)
 
@@ -79,6 +98,7 @@ export default class BarDataLabels {
         w.globals.yLabelFormatters[0](yLabel),
         parseFloat(dataLabelsConfig.style.fontSize)
       )
+      console.log(`CLOG in "handleBarDataLabels", value "textRects"`, textRects)
     }
 
     const params = {
@@ -99,7 +119,7 @@ export default class BarDataLabels {
       dataLabelsConfig,
       barDataLabelsConfig,
       barTotalDataLabelsConfig,
-      offX,
+      offX: 20,
       offY
     }
 
